@@ -30,6 +30,7 @@ Estes são os fundamentos que estou praticando ao longo do módulo:
 
 > **"Profissional não confia. Profissional confere."**
 
+
 Essa frase resume a postura que quero levar comigo em cada teste, cada script e cada linha de código: validar, checar e nunca dar nada como certo apenas porque "parece que funcionou".
 
 ## ✅ Status

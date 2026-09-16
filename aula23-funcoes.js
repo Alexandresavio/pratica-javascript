@@ -1,7 +1,7 @@
 /**
  * Uma função em JavaScript é um bloco de código reutilizável que você cria uma vez e pode "chamar" (executar) quantas vezes quiser,
- * sempre que precisar realizar aquela tarefa. Pense numa função como uma receita de bolo: você escreve o passo a passo uma vez,
- * e toda vez que quiser fazer o bolo, só segue a receita — não precisa reinventar o processo do zero.
+ * sempre que precisar realizar aquela tarefa. Pense numa função como uma receita de bolo, você escreve o passo a passo uma vez,
+ * e toda vez que quiser fazer o bolo, só segue a receita não precisa reinventar o processo do zero.
  */
 
 //Criando uma função sem parametro e sem retorno

@@ -1,69 +1,24 @@
-// /**
-//  * Conceito de estruturas de repetição(Loops)
-//  * Estruturas de repetição (também chamadas de "loops") são blocos de código que executam a mesma instrução várias vezes,
-//  * sem que você precise escrevê-la repetidamente.
-//  */
 
+// estrutura FOR tradicional
+for(let i = 0; i < 5; i++){
+    console.log("Execução número: ",i);
+}
 
-// /**
-//  * while — “enquanto for verdadeiro”
-//  * O while executa um bloco de código enquanto a condição for verdadeira.
-//  */
-// console.log("--------------------------")
-// console.log("Utilizando estrutura while");
-// let contador = 1;
+console.log("------------------------");
 
-// while (contador <= 5) {
-//     console.log(contador);
-//     contador++; // variável de controle
-// }
+for (let i = 1; i <= 3; i++){
+    console.log(`Executando teste ${i}` );
+    console.log("Teste passou!");
+}
 
+console.log("------------------------");
 
-// /**
-//  * do...while — executa pelo menos uma vez
-//  * Diferença principal: O código roda ANTES de verificar a condição
-//  */
-// console.log("--------------------------")
-// console.log("Utilizando estrutura Do while");
-// let cont = 1;
-// do{
-//     console.log(cont);
-//     cont++;
-// }while(cont <= 5);
+//iterar sobre array com for
+let navegadores = ["chrome", "firefox", "edge", "safari"];
 
-
-// console.log("--------------------")
-// /**
-//  * O loop for: É a estrutura de repetição mais comum. Ela tem três partes, separadas por ponto e vírgula
-//  * 
-//  * for(let nomeDaVariavel = valor da incialização; condição; incremeto/decremento){
-//  *    CÓDIGO...
-//  * }
-//  */
-// console.log("Utilizando laço FOR")
-// for( let i = 1; i <= 5; i++){
-//     console.log(`${i}`);
-// }
-// /**
-//  * Isso imprime 1, 2, 3, 4, 5. Vamos entender cada parte:
-//  * let i = 1 → inicialização: cria a variável contadora, começando em 1
-//  * i <= 5 → condição: o loop continua rodando enquanto isso for verdadeiro
-//  * i++ → incremento: depois de cada repetição, soma 1 a i (é o mesmo que i = i + 1)
-//  */
-
-// console.log("------------------------");
-// /**
-//  * Percorrendo um array com for: 
-//  * Um uso muito comum é passar por cada item de um array.
-//  * Aqui, i vai de 0 até frutas.length - 1 (ou seja, 0, 1, 2),
-//  * acessando cada posição do array: frutas[0], frutas[1], frutas[2].
-//  */
-// const frutas = ["maçã", "banana", "uva"];
-// for(let i = 0; i < frutas.length; i++){ 
-//     console.log(frutas[i]);
-// }
-
-
+for(let i = 0; i < navegadores.length; i++){
+    console.log(`Testando no navegador: ${navegadores[i]}`);
+}
 
 console.log("------------------------");
 

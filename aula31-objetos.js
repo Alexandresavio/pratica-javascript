@@ -1,38 +1,43 @@
-const usuario = { 
-    nome: "Ana", 
-    email: "ana@teste.com", 
-    idade: 28, 
-    ativo: true 
+const usuario = {
+    nome: "Ana",
+    email: "ana@teste.com",
+    idade: 28,
+    ativo: true
 };
-
-console.log(usuario.nome);
+console.log(usuario); // mostra todos os dados do objeto
+console.log(usuario.nome);// acessa uma propriedade especifica
 
 //Exemplo 2
-const dadosLoginValido ={
-    email:"usuario@exemplo.com",
+const dadosLoginValido = {
+    email: "usuario@exemplo.com",
     senha: "Senha123",
-    perfil:"admin"
+    perfil: "admin"
 }
 console.log(`Email de teste: ${dadosLoginValido.email}`);
 console.log(`Senha de teste: ${dadosLoginValido.senha}`);
+console.log(`Senha de teste: ${dadosLoginValido.idade}`);// vai retornar como undefined porque a propriedade não existe
 
 //exemplo 3
 // Objetos aninhados: Um objeto pode conter outro objeto: 
-const cliente = { 
-    nome: "Ana", 
-    contato: { 
-        email: "ana@teste.com", 
-        telefone: "99999-9999" 
-    } 
+const cliente = {
+    nome: "Ana",
+    contato: {
+        email: "ana@teste.com",
+        telefone: "99999-9999"
+    }
 };
 console.log(`Email: ${cliente.contato.email}`);
 console.log(`Telefone:${cliente.contato.telefone}`);
 
 //Exemplo 4
 //  Arrays dentro de objetos: Um objeto também pode possuir listas: 
-const funcionario = { 
-    nome: "Ana", 
-    habilidades: ["JavaScript", " QA", " Playwright"] 
+const funcionario = {
+    nome: "João",
+    contato: {
+        email: "João@teste.com",
+        telefone: "99999-9999"
+    },
+    habilidades: ["JavaScript", " QA", " Playwright"]
 };
 console.log(`Nome: ${funcionario.nome}`);
 console.log(`Habilidades: ${funcionario.habilidades}`);//o array é convertido em texto, separado por vírgulas

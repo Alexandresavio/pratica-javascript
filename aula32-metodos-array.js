@@ -35,7 +35,7 @@ const maioresDeIdade = idades.filter(idade => idade >= 18);
 console.log(maioresDeIdade);
 
 // ===========================================================
-// EXEMPLO 04 - FILTER() COM FUNCTION
+// EXEMPLO 05 - FILTER() COM FUNCTION
 // ===========================================================
 
 // Aqui criei uma constante chamada "idades".
@@ -44,18 +44,14 @@ console.log(maioresDeIdade);
 const idades = [15, 22, 17, 35, 19];
 
 
-// Aqui criei outra constante chamada "verificaIdades".
-// Ela recebe o resultado produzido pelo filter().
-//
-// Criei uma função tradicional com o parâmetro "idade".
-// A cada execução, "idade" recebe um elemento do array.
+// Aqui criei outra constante chamada "verificaIdades" e ela vai receber o resultado produzido pelo filter().
 const verificaIdades = idades.filter(function(idade) {
+    // Criei uma função tradicional com o parâmetro "idade", a cada execução "idade" recebe um elemento do array.
 
     // Verifica se a idade é maior ou igual a 18.
     if (idade >= 18) {
 
-        // Quando a condição é verdadeira,
-        // retornamos o elemento para que o filter()
+        // Quando a condição é verdadeira, retornamos o elemento para que o filter()
         // o mantenha no novo array.
         return idade;
     }
@@ -66,13 +62,10 @@ console.log(verificaIdades);
 
 
 // =====================================================
-// EXEMPLO 04 - FILTER() COM ARROW FUNCTION
+// EXEMPLO 06 - FILTER() COM ARROW FUNCTION
 // =====================================================
 
-// Aqui criei uma constante chamada "resultadoDosTestes".
-// O valor dela é um array contendo vários objetos.
-// Cada objeto representa o resultado de um teste.
-//
+// Aqui criei uma constante chamada "resultadoDosTestes". O valor dela é um array contendo vários objetos.
 // Esses são os elementos que o filter() irá analisar.
 const resultadoDosTestes = [
     { nome: "Login válido", passou: true },
@@ -82,25 +75,18 @@ const resultadoDosTestes = [
 ];
 
 
-// Aqui criei outra constante chamada "falhados".
-// Ela recebe o resultado produzido pelo filter().
-//
-// Criei uma Arrow Function com o parâmetro "teste".
-// A cada execução, "teste" recebe um objeto do array.
-//
-// Como a Arrow Function possui apenas uma expressão,
-// não precisamos escrever "return" nem usar chaves {}.
-//
-// ! significa "negação".
-// Assim, o filter() irá manter somente os testes
-// que não passaram.
+// Aqui criei outra constante chamada "falhados" que vai receber o resultado produzido pelo filter().
 const falhados = resultadoDosTestes.filter(teste => !teste.passou);
+// Criei uma Arrow Function com o parâmetro "teste" que a cada execução "teste" recebe um objeto do array.
+// Como a Arrow Function possui apenas uma expressão, não precisamos escrever "return" nem usar chaves {}.
+// ! significa "negação".
+// Assim, o filter() irá manter somente os testes que não passaram.
 
 // Exibe no console o novo array criado pelo filter().
 console.log(falhados);
 
 // =====================================================
-// EXEMPLO 05 - FIND() COM ARROW FUNCTION
+// EXEMPLO 07 - FIND() COM ARROW FUNCTION
 // =====================================================
 const usuario = [
     { id:1, nome:"Ana", admin:false},

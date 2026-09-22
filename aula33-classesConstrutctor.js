@@ -21,19 +21,12 @@ class Pessoa {
 }
 
 
-// O operador "new" é utilizado para criar uma nova
-// instância da classe Pessoa.
-//
-// O constructor é executado automaticamente,
-// recebendo "Ana" como nome e 28 como idade.
+// O operador "new" é utilizado para criar uma nova instância da classe Pessoa.
+// O constructor é executado automaticamente, recebendo "Ana" como nome e 28 como idade.
 const pessoa1 = new Pessoa("Ana", 28);
 
 
-// Aqui criamos outra instância da classe Pessoa.
-//
-// Neste caso:
-// nome = "João"
-// idade = 35
+// Aqui criamos outra instância da classe Pessoa. Neste caso com nome = "João" e idade = 35
 const pessoa2 = new Pessoa("João", 35);
 
 
@@ -41,8 +34,7 @@ const pessoa2 = new Pessoa("João", 35);
 console.log(pessoa1);
 
 
-// Acessamos diretamente a propriedade "nome"
-// do objeto pessoa2.
+// Acessamos diretamente a propriedade "nome" do objeto pessoa2.
 console.log(pessoa2.nome);
 
 
@@ -52,54 +44,27 @@ console.log(pessoa2.nome);
 
 class Funcionario {
 
-    // Constructor responsável por inicializar
-    // os dados de cada funcionário.
+    // Constructor responsável por inicializar os dados de cada funcionário.
     constructor(nome, idade) {
 
-        // "this" representa o funcionário que está
-        // sendo criado naquele momento.
+        // "this" representa o funcionário que está sendo criado naquele momento.
         this.nome = nome;
         this.idade = idade;
     }
 
-
-    // =================================================
-    // MÉTODO apresentar()
-    // =================================================
-
-    // Um método é uma função que pertence à classe.
-    //
-    // Neste caso, o método apresenta informações
-    // sobre o funcionário.
+    // MÉTODO apresentar(): Um método é uma função que pertence à classe.
+    // Neste caso, o método apresenta informações sobre o funcionário.
     apresentar() {
 
-        // Usamos "this.nome" para acessar o nome
-        // do funcionário atual.
-        //
-        // Usamos "this.idade" para acessar a idade
-        // do funcionário atual.
+        // Usamos "this.nome" para acessar o nome do funcionário atual.
+        // Usamos "this.idade" para acessar a idade do funcionário atual.
         console.log(
             `Olá meu nome é ${this.nome} e tenho ${this.idade} anos.`
         );
     }
 
-
-    // =================================================
-    // MÉTODO envelhecer()
-    // =================================================
-
-    // "anos = 1" define um valor padrão.
-    //
-    // Se nenhum valor for informado ao chamar o método,
-    // "anos" será automaticamente igual a 1.
     envelhecer(anos = 1) {
-
-        // Aqui aumentamos a idade do funcionário.
-        //
-        // "this.idade" representa a idade atual.
-        // "+= anos" adiciona a quantidade de anos.
         this.idade += anos;
-
 
         // Exibe a nova idade do funcionário.
         console.log(
@@ -108,20 +73,9 @@ class Funcionario {
     }
 }
 
-
 // Criamos uma nova instância da classe Funcionario.
-//
-// O constructor recebe:
-// nome = "Ana"
-// idade = 28
 const funcionario = new Funcionario("Ana", 28);
-
 
 // Chamamos o método apresentar() do objeto funcionario.
 funcionario.apresentar();
-
-
-// Chamamos o método envelhecer() passando 2 anos.
-//
-// A idade passa de 28 para 30.
 funcionario.envelhecer(2);

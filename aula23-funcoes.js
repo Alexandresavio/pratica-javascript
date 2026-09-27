@@ -48,3 +48,49 @@ const resultado = somar(4, 6); //retorna 10
  * chamado arrow function: const somar2 = (a, b) => a + b;
  */
 console.log(resultado);
+
+
+function iniciarTeste(){
+    console.log("Inciando teste...");
+}
+
+// function fazerLogin(){
+//     console.log("Fazendo login...");
+//     console.log("Login realizado!");
+// }
+
+function validarDashboard(){
+    console.log("validando dashboard...");
+    console.log("Dashboard OK!");
+}
+
+function finalizarTeste(){
+    console.log("Finalizado teste...")
+}
+
+//chamada da funcao
+iniciarTeste();
+fazerLogin();
+validarDashboard();
+finalizarTeste();
+
+//Reuso: Realizando funções em multiplos testes
+function fazerLogin(){
+    console.log("Fazendo login...");
+    console.log("Login realizado!");
+}
+
+//Teste 1 validar perfil
+console.log("\n --- Teste 1: validar perfil ---");
+fazerLogin();
+console.log("Validando perfil...");
+
+//Teste 2 validar configurações
+console.log("\n --- Teste 2: validar configurações ---");
+fazerLogin();
+console.log("Validando configurações...");
+
+//Teste 3 validar logout
+console.log("\n --- Teste 3: validar logout ---");
+fazerLogin();
+console.log("Validando logout...");

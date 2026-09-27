@@ -13,8 +13,7 @@ test('login inválido', async ({page}) => {
     await page.fill('#senha','senha-errada');
 })
 
-// Arquivos com variveis de ambiente - etiquetas de proteção
-//uso do const
+// Arquivos com variveis de ambiente - etiquetas de proteção - uso do const
 const URL_SISTEMA = 'https://northwind-test-plataform.vercel.app/';
 const USUARIO_PADRAO = 'admin';
 const SENHA_PADRAO = '123456';

@@ -1,26 +1,32 @@
-
 // estrutura FOR tradicional
 for(let i = 0; i < 5; i++){
     console.log("Execução número: ",i);
 }
+console.log("------------------------------------------------------------------------------------------------");
 
-console.log("------------------------");
 
+
+
+//exemplo executar teste multiplas vezes
 for (let i = 1; i <= 3; i++){
     console.log(`Executando teste ${i}` );
     console.log("Teste passou!");
 }
+console.log("------------------------------------------------------------------------------------------------");
 
-console.log("------------------------");
 
-//iterar sobre array com for
+
+
+//iterar sobre array com for tradicional
 let navegadores = ["chrome", "firefox", "edge", "safari"];
 
-for(let i = 0; i < navegadores.length; i++){
-    console.log(`Testando no navegador: ${navegadores[i]}`);
+for( let i = 0; i < navegadores.length; i++){
+    console.log("Testando navegador:",navegadores[i]);    
 }
+console.log("------------------------------------------------------------------------------------------------");
 
-console.log("------------------------");
+
+
 
 //Exemplo 1: validando uma lista de e-mails: 
 function emailValido(email){
@@ -35,67 +41,56 @@ for (const email of listaEmails) {
     console.log(`O email "${email}" é válido? ${valido}`);
 }
 
-console.log("--------------------------");
-
-//Exemplo 2: mesmo resultado com forEach
+// Exemplo 2: mesmo resultado com forEach
+// forEach() é um método usado para percorrer os elementos de um array, executando uma ação para cada elemento.
+// A ideia é: “para cada item do array, execute esta função
 listaEmails.forEach((email) => {
     console.log(`O email "${email}" é válido? ${emailValido(email)}`);
 });
 
-console.log("-------------------------");
 
-//Exemplo 3: contando quantos e-mails são válidos (loop + condicional + um contador)
-let totalValidos = 0;
 
-for (const email of listaEmails) {
-    if (emailValido(email)) {
-        totalValidos++;
+
+console.log("------------------------------------------------------------------------------------------------");
+// O forEach é uma forma de percorrer todos os elementos de um array, um por um, executando
+// uma ação para cada elemento.
+let usuarios =["admin", "user1", "user2", "guest"];
+
+usuarios.forEach((usuario) => {
+                //usuario = elemento atual
+    console.log("Validando usuario:", usuario);
+});
+console.log("------------------------------------------------------------------------------------------------");
+
+
+
+
+//exemplo: validar status code
+let statusCodes =[200, 201, 404, 500];
+
+statusCodes.forEach((status) =>{
+    if(status >= 200 && status < 300){
+        console.log(`Status ${status}: sucesso`);
+    }else{
+        console.log(`Status ${status}: Erro`)
     }
-}
-console.log(`Total de emails válidos: ${totalValidos}`); // 2
+})
+console.log("------------------------------------------------------------------------------------------------");
 
-console.log("-------------------------");
 
-//Exemplo 4: validando vários usuários com validarUsuario
-function validarUsuario(nomeUsuario){
-    console.log("Validando usuário:", nomeUsuario);
-}
 
-const usuarios = ["admin", "guest", "qa_tester", "dev01"];
 
-for (let i = 0; i < usuarios.length; i++) {
-    validarUsuario(usuarios[i]);
-}
+//Exemplo: Processar dados de teste
+//Processar multiplos usuarios
+let usuarioTeste =[
+    {nome:"Admin", email:"admin@teste.com"},
+    {nome:"User1", email:"user1@teste.com"},
+    {nome:"Guest", email:"guest@teste.com"}
+]
+usuarioTeste.forEach((usuario) => {
+    console.log("Testando login de ", usuario.nome);
+    console.log("Email:", usuario.email);
+    console.log("Login OK")
+});
+console.log("------------------------------------------------------------------------------------------------");
 
-console.log("-------------------------");
-
-//Exemplo 5: somando todos os valores de um array
-function somar(a, b){
-    return a + b;
-}
-
-const valores = [5, 10, 15, 20];
-let total = 0;
-
-for (const valor of valores) {
-    total = somar(total, valor);
-}
-
-console.log(`Soma total: ${total}`); // 50
-
-console.log("------------------------");
-
-//Exemplo 6: combinando tudo — login simulado em lote (reaproveitando a função emailValido já declarada acima)
-const cadastros = [
-    { email: "ana@email.com", senha: "123456" },
-    { email: "bruno.com", senha: "abcdef" },
-    { email: "carla@email.com", senha: "senha99" }
-];
-
-for (const usuario of cadastros) {
-    if (emailValido(usuario.email)) {
-        console.log(`✔ Cadastro aprovado para: ${usuario.email}`);
-    } else {
-        console.log(`✘ Cadastro rejeitado, email inválido: ${usuario.email}`);
-    }
-}

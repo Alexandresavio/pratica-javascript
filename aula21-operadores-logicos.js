@@ -1,8 +1,8 @@
-//operadores lógicos
+// operadores lógicos
 // let emailValido = true;
 // let senhaValida = false;
 
-//Operador E and
+// Operador E and
 // let loginPermitido = emailValido && senhaValida;
 // console.log("Login permitido? ",loginPermitido);
 
@@ -10,11 +10,11 @@
 // let loginPermitido = emailValido || senhaValida;
 // console.log("Login permitido? ",loginPermitido);
 
-//Operado Não
+// Operado Não
 // let loginPermitido = !emailValido && !senhaValida;
 // console.log("Login permitido? ",loginPermitido);
 
-//condicionais
+// condicionais
 // if(emailValido && senhaValida){
 //     console.log("Login permitido");
 // }else{
@@ -31,7 +31,7 @@
 //     console.log("sem permissão de edição")
 // }
 
-//combinando operadores
+// combinando operadores
 // let idadeUsuario = 10;
 // let temCartao = true;
 // let saldoPositivo = true;
